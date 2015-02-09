@@ -1,0 +1,45 @@
+<script>
+function Animal(name, speed, focus) {
+  this.name = name;
+  this.speed = speed;
+  this.focus = focus;
+  this.position = 0;
+  this.environment = ["road", "trail", "mountain", "swamp"];
+
+
+  var raceTime;
+  this.run = function() {
+    do {
+      var startTime = new Date();
+    } while this.position = 0;
+    if (Math.random() * 10 < this.focus) {
+      this.position += this.speed;
+    };
+
+  };
+  this.report = function() {
+    console.log(this.name + " has run " + this.position);
+  };
+}
+
+
+var rabbit = new Animal("Bugsy", 7, 2);
+var turtle = new Animal("Mo", 2, 8);
+
+while (rabbit.position < 100 && turtle.position < 100) {
+
+  rabbit.run();
+  turtle.run();
+
+  rabbit.report();
+  turtle.report();
+
+  if (rabbit.position = 100 || turtle.position = 100) {
+    var endTime = new Date();
+    var totalTime = endTime - startTime;
+    console.log("The winner took " + totalTime + " seconds to run the race!");
+  }
+
+}
+
+</script>
