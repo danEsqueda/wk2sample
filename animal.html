@@ -9,16 +9,18 @@ function Animal(name, speed, focus) {
 
   var raceTime;
   this.run = function() {
-    do {
-      var startTime = new Date();
-    } while this.position = 0;
+
+    var startTime = 0;
+
     if (Math.random() * 10 < this.focus) {
       this.position += this.speed;
     };
 
   };
   this.report = function() {
-    console.log(this.name + " has run " + this.position);
+    currentTime = new Date();
+    startTime += currentTime.getSeconds();
+    console.log(this.name + " has run " + this.position + " in " + startTime + " seconds.");
   };
 }
 
@@ -33,12 +35,6 @@ while (rabbit.position < 100 && turtle.position < 100) {
 
   rabbit.report();
   turtle.report();
-
-  if (rabbit.position = 100 || turtle.position = 100) {
-    var endTime = new Date();
-    var totalTime = endTime - startTime;
-    console.log("The winner took " + totalTime + " seconds to run the race!");
-  }
 
 }
 
